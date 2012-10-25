@@ -1,0 +1,9 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      = link_to 'Rivus', root_url, class: 'brand'
+      %ul.nav
+        %li= link_to 'Sources', sources_path
+      %p.nav.pull-right
+        = gravatar current_user.email
+        = link_to 'Sign-out', destroy_user_session_url, method: :delete, class: 'btn btn-small'

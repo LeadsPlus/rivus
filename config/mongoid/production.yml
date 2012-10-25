@@ -1,0 +1,8 @@
+production:
+  sessions:
+    default:
+      database: rivus_production
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :strong

@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title Rivus
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          = link_to 'Rivus', root_url, class: 'brand'
+          %p.nav.pull-right
+            Have an account?
+            = link_to 'Sign-in', new_user_session_url, class: 'btn btn-small'
+    .container
+      = bootstrap_flash
+      = yield
+      .footer
+        %p
+          &copy;
+          = link_to 'oz', 'https://github.com/oz'
+          2012

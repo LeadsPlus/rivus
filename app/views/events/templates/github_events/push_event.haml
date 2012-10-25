@@ -1,0 +1,6 @@
+%ul.push-event
+  - event.payload.commits.each do |commit|
+    %li
+      %code
+        %a{href: commit_url(event.repo.name, commit.sha)}= commit.sha[0..7]
+      .message= commit.message

@@ -1,0 +1,17 @@
+= render partial: 'data'
+
+.row
+
+  %section.sources.span2
+    %header
+      %h1
+        Sources
+        = link_to new_source_path, class: 'add-source btn btn-mini', title: 'Add another source' do
+          %i.icon-plus-sign
+    %ul
+      - current_user.sources.ready.each do |source|
+        %li= source.name
+
+  %section.events.span9
+    %h1 What's up?
+    = render current_user.events

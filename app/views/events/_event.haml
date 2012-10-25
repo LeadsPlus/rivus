@@ -1,0 +1,11 @@
+%article.event{class: event.type}
+  %h2= event.title
+
+  .content
+    != event.content
+
+  %p.time{:'data-time' => event.emitted_at}
+    = link_to time_ago_in_words(event.emitted_at) + ' ago', event.link, target: 'blank'
+
+  .controls
+    %p controls

@@ -1,0 +1,27 @@
+# Sources configuration
+# =====================
+#
+# Configure here the OAuth tokens and secrets for your applications.
+#
+# For example, you'll need to create a Github application, and register
+# its client-id and client-secret to be able to add a Github source.
+#
+:gaston:
+  :sources:
+    :github:
+      :client_id: 'your-github-app-client-id'
+      :client_secret: 'your-github-app-client-secret'
+      :scope: 'repo'
+      :interval: 20
+    :rss:
+      :interval: 20
+
+:production:
+  :sources:
+    :github:
+      :client_id: 'your-github-app-client-id'
+      :client_secret: 'your-github-app-client-secret'
+      :scope: 'repo'
+      :interval: 20
+    :rss:
+      :interval: 20

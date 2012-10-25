@@ -1,0 +1,18 @@
+= simple_form_for(@source) do |f|
+  - if notification = f.error_notification
+    = notification
+
+  %fieldset
+    %legend Source type
+    = f.input :name
+    - if @source.persisted?
+      = render partial: 'configurable_form', locals: {f: f} if @source.configurable?
+    - else
+      = f.input(:type, collection: Source::TYPES.keys, prompt: 'Select source type')
+
+  .form-actions
+    - if @source.persisted?
+      = f.button :submit, 'Save', class: 'btn'
+    - else
+      = f.button :submit, 'Setup source', class: 'btn'
+    = link_to 'Cancel', sources_path, class: 'btn'

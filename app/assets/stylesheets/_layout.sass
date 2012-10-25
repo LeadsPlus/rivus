@@ -1,0 +1,43 @@
+body
+  padding-top: 40px
+
+  // Source column
+  .sources
+    padding: 40px 5px
+    background-color: $source_bg
+    color: $source_font_color
+
+    .add-source
+      display: none
+    &:hover
+      .add-source
+        display: inline
+
+  // Dashboard events column
+  .events
+    background-color: $events_bg
+    color: $events_font_color
+    //border: 1px solid red
+
+    h1
+      padding: 10px
+      text-align: right
+
+    .event
+      border-bottom: 1px $event_border_color solid
+      padding-left: 24px
+      padding-top: 15px
+
+      .time
+        text-align: right
+      .controls
+        display: none
+
+      &:hover
+        background-color: $event_hover_bg
+        .controls
+          display: block
+
+  .footer
+    p
+      text-align: right
